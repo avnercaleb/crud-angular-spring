@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Curso } from '../models/curso';
 
 @Component({
   selector: 'app-cursos',
@@ -7,4 +8,15 @@ import { Component } from '@angular/core';
 })
 export class CursosComponent {
 
+  cursos: Curso[] = [
+    {_id: "1", nome: "Angular", categoria: "Front-End"}
+  ];
+  displayedColumns = ['nome', 'categoria'];
+
+  constructor() {
+  }
+
+  ngOnInit(): void {
+
+  }
 }
